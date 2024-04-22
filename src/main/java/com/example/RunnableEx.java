@@ -1,11 +1,11 @@
 package com.example;
 
-class ThreadClass extends Thread {
+class RunnableThread implements Runnable {
 
 	private Thread t;
 	private String threadName;
 
-	public ThreadClass(String name) {
+	public RunnableThread(String name) {
 		threadName = name;
 		System.out.println("Creating " + threadName);
 	}
@@ -49,15 +49,12 @@ class ThreadClass extends Thread {
 	}
 }
 
-public class ThreadDemo {
+public class RunnableEx {
 	public static void main(String[] args) {
-		ThreadClass R1 = new ThreadClass("Thread-1");
+		RunnableThread R1 = new RunnableThread("Thread-1");
 		R1.start();
 
-		ThreadClass R2 = new ThreadClass("Thread-2");
+		RunnableThread R2 = new RunnableThread("Thread-2");
 		R2.start();
-
-		ThreadClass R3 = new ThreadClass("Thread-3");
-		R3.run();
 	}
 }

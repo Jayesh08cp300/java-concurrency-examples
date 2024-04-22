@@ -3,7 +3,7 @@ package com.example;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-public class CompletableFutureExample {
+public class CompletableFutureEx {
 
 	public static void main(String[] args) {
 		// Create a CompletableFuture that will complete with a result
